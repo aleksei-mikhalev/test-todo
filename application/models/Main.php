@@ -62,7 +62,7 @@ class Main extends Model
         );
 
         $edited = $taskData[0]['edited'];
-        if ($edited === 0 && $taskData[0]['task_text'] !== htmlspecialchars($task_text)) {
+        if ($edited == 0 && $taskData[0]['task_text'] !== htmlspecialchars($task_text)) {
             $edited = 1;
         }
         $this->db->query(
